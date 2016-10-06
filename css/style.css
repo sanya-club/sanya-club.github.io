@@ -1038,4 +1038,9 @@ border-radius: 50%;
   .tab-content a {
     font-size: 20px;
   }
+ .navbar-custom .navbar-brand {
+    	font-weight: 700;
+    	font-size: 14px;
+    	font-family: Lobster, cursive;
+}
 }
