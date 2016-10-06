@@ -469,7 +469,7 @@ aside[id=js-slidr2-control] .slidr-control.right::after,
 aside[id=js-slidr-control] .slidr-control.right::after {
   content: "";
   position: absolute;
-  right: 10px!important;
+  right: -15px!important;
   top: 35%!important;
   margin-top: -8px;
   border-width: 8px 12px 8px 10px;
