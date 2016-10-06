@@ -545,7 +545,8 @@ aside[id=js-slidr-control] .slidr-control.up::after {
 
 .slide__text {
   font-size: 14px;
-  color: #ccc
+  color: #ccc;
+  max-width: 84%;
 }
 
 @media (min-width:768px) {
