@@ -1,0 +1,189 @@
+.page-header {
+  background: #283645;
+  transition: background .4s;
+}
+.page-header__container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.page-header__nav-wrap {
+  display: block;
+  float: left;
+  width: 100%;
+}
+.main-nav {
+  display: block;
+  margin-top: 5px;
+  text-align: center;
+  max-height: 0;
+  overflow: hidden;
+  background: #283645;
+  transition: max-height 0.4s;
+}
+.main-nav li {
+  border-top: 1px solid grey;
+  box-shadow: 0 1px 0 #4848f4 inset;
+}
+.main-nav li:last-child {
+  border-bottom: 1px solid #000000;
+}
+.page-header.open {
+  background: ;
+}
+.open .main-nav {
+  max-height: 500px;
+}
+.open li:hover > a,
+.open li.active > a {
+  color: red;
+  text-decoration: none;
+}
+.main-nav li > a {
+  display: block;
+  padding: 14px 0;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+.main-nav li > a.active {
+  cursor: default;
+}
+.main-nav li > a:active {
+  opacity: .3;
+}
+.nav-toggle {
+  position: absolute;
+  top: 21px;
+  right: 39px;
+  padding: 10px 50px 16px 0px;
+  color: transparent;
+  font: 0/0 a;
+  cursor: pointer;
+}
+.nav-toggle span,
+.nav-toggle span:before,
+.nav-toggle span:after {
+  cursor: pointer;
+  height: 4px;
+  width: 50px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: transform .5s;
+}
+.nav-toggle:hover span,
+.nav-toggle:hover span:before,
+.nav-toggle:hover span:after,
+.nav-toggle:focus span,
+.nav-toggle:focus span:before,
+.nav-toggle:focus span:after {
+  background-color: red;
+}
+.nav-toggle:active span,
+.nav-toggle:active span:before,
+.nav-toggle:active span:after {
+  background: #283645;
+}
+.nav-toggle span {
+  transition: width .5s;
+}
+.nav-toggle span:before {
+  top: -10px;
+}
+.nav-toggle span:after {
+  bottom: -10px;
+}
+.open .nav-toggle span {
+  background: transparent;
+  width: 0;
+  transition: all 0s;
+}
+.open .nav-toggle span:before {
+  transform: rotate(45deg) translate(25px, -9px);
+  height: 3px;
+  width: 29px;
+  transition: transform .5s;
+}
+.open .nav-toggle span:after {
+  transform: rotate(-45deg) translate(23px, 10px);
+  height: 3px;
+  width: 29px;
+  transition: transform .5s;
+}
+@media (min-width: 992px) {
+  .nav-toggle {
+    display: none;
+  }
+  .page-header__nav-wrap {
+    display: table;
+  }
+  .main-nav {
+    display: table-row;
+    max-height: 100%;
+    background: transparent;
+  }
+  .main-nav > li {
+    display: table-cell;
+    border-top: none;
+    box-shadow: none;
+    padding: 24px 0 29px;
+    overflow: hidden;
+  }
+  .main-nav > li:last-child {
+    border-bottom: none;
+  }
+  .main-nav li > a {
+    position: relative;
+    display: inline;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    padding: 10px 0;
+    text-transform: none;
+  }
+  .main-nav li > a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    background: white;
+    opacity: 0;
+    transition: all .5s;
+  }
+  .page-header.open {
+    background: #283645;
+  }
+  .page-header.open .main-nav li:hover > a,
+  .page-header.open .main-nav li.active > a {
+    color: white;
+  }
+  .main-nav li a:hover,
+  .main-nav li a:focus,
+  .main-nav li.active a {
+    text-decoration: none;
+    color: white;
+  }
+  .main-nav li a:hover:after {
+    width: 100%;
+    height: 2px;
+    opacity: 1;
+  }
+  .main-nav li.active > a {
+    cursor: default;
+  }
+}
+@media (min-width: 700px) {
+  .nav-toggle {
+    top: 45px;
+    right: 55px;
+  }
+}
+@media (min-width: 1100px) {
+  .main-nav li {
+    padding: 39px 0 41px;
+    text-align: right;
+  }
+}

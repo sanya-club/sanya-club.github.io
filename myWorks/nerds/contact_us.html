@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Nerds</title>
+        <link href="images/favicon.png" type="image/png" rel="shortcut icon">
+        <link href="css/style-nerds.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="css/symbols-nerds.css">
+<!--        <link rel="stylesheet" href="css/animation.css">[if IE 7]><link rel="stylesheet" href="css/symbols-nerds-ie7.css"><![endif]-->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,700,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    </head> 
+    <body>
+        <header class="main-header">
+            <div class="container clearfix">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="139" height="56" alt="logoNerds"></a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li class="active"><a href="#">Студия</a></li>
+                        <li><a href="#">Клиенты</a></li>
+                        <li><a href="catalog.html">Магазин</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="basket">
+                    <a class="icon-basket" href="#">Корзина</a>
+                </div>
+            </div>
+            <div class="container clearfix">
+                <div class="container clearfix">
+            <div class="header-text">
+                Добро пожаловать в магазин готовых макетов
+            </div>
+        </div>
+            </div>
+        </header>
+        <main class="main-content">
+            
+                    <div class="inner-content">
+        <form class="login-form" action="/echo" method="post">
+            <div class="field-enter">
+                <label for="modal-user">Ваше имя:</label>
+                <input type="text" id="modal-user" name="login" placeholder="Представьтесь, пожалуйста" focus>
+            </div>
+            <div class="field-enter">
+                <label for="modal-user">Ваш e-mail:</label>
+                <input type="email" id="modal-email" name="email" placeholder="Для отправки ответа" >
+            </div>
+            <label for="modal-text">Tекст письма:</label>
+            <textarea id="modal-text" name="text" placeholder="в свободной форме" rows="5" cols="75"></textarea>
+            <div class="modal-btn">
+                <input class="btn form-btn" type="submit"  name="go" value="отправить">
+                <input class="btn form-btn reset" type="reset" name="close" value="отмена">
+            </div>
+        </form>
+    </div>
+                          
+        </main>
+        <footer class="main-footer">
+            <div class="map">
+                <style>
+    #map {
+        height:416px;
+        width:1200px;
+    }
+    .gm-style-iw * {
+        display: block;
+        width: 100%;
+    }
+    .gm-style-iw h4, .gm-style-iw p {
+        margin: 0;
+        padding: 0;
+    }
+    .gm-style-iw a {
+        color: #4272db;
+    }
+</style>
+
+<div id='map'></div>
+
+                
+                <div class="marker">
+                    <img src="images/nerds-marker.png" width="231" height="190" alt="">
+                </div>
+            
+                </div>
+            </div>
+            <div class="container">
+            <section class="social-footer clearfix">
+                <div class="social-button clearfix">
+                    <a href="#" class="social-btn Social-btn-vk icon-vk">Вконтакте</a>
+                    <a href="#" class="social-btn Social-btn-fb icon-facebook">Фейсбук</a>
+                    <a href="#" class="social-btn Social-btn-inst icon-instagramm">Инстаграм</a>
+                </div>
+                <div class="social-text">
+                    <h2>Давайте дружить, это выгодно!</h2>
+                    <p>Скидка 10% для друзей из социальных сетей.</p>
+                </div>    
+            </section>
+            </div>
+        </footer>
+    
+    <script>
+      var link = document.querySelector(".adress-btn");
+      var popup = document.querySelector(".modal-content");
+      var close = document.querySelector(".reset");
+      var form = popup.querySelector("form");
+      var login = popup.querySelector("[name=login]");
+      var email = popup.querySelector("[name=email]");
+      var textarea = popup.querySelector("[name=text]");
+      var storage = localStorage.getItem("login");
+                 
+      link.addEventListener("click", function(event) {
+            event.preventDefault();
+            popup.classList.add("modal-content-show");
+//            email.focus();
+                if (storage) {
+                login.value = storage;
+                email.focus();
+                } else {
+                login.focus();
+                }
+      });
+
+      close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("modal-content-show");
+      });
+
+      form.addEventListener("submit", function(event) {
+        if (!(login.value && email.value && textarea.value)) {
+          event.preventDefault();
+          popup.classList.remove("modal-error");
+          popup.classList.add("modal-error");
+        } else {
+          localStorage.setItem("login", login.value);
+        }
+      });
+
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode == 27) {
+          if (popup.classList.contains("modal-content-show")) {
+            popup.classList.remove("modal-content-show");
+          }
+        }
+      });
+
+      </script> 
+<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDKaQtfSoAGspUY7yThKjKMxJSeGvIDdvo&sensor=false&extension=.js'></script> 
+ 
+<script> 
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng(45.043713, 38.942372),
+            zoom: 18,
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.DEFAULT,
+            },
+            disableDoubleClickZoom: true,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            },
+            scaleControl: true,
+            scrollwheel: true,
+            panControl: true,
+            streetViewControl: true,
+            draggable : true,
+            overviewMapControl: true,
+            overviewMapControlOptions: {
+                opened: false,
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+        }
+        var mapElement = document.getElementById('map');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+['hello', 'undefined', 'undefined', 'undefined', 'undefined', 45.0433959, 38.94450649999999, 'images/nerds-marker.png']
+        ];
+        for (i = 0; i < locations.length; i++) {
+			if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+			if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+			if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+           if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+           if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+            marker = new google.maps.Marker({
+                icon: markericon,
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                map: map,
+                title: locations[i][0],
+                desc: description,
+                tel: telephone,
+                email: email,
+                web: web
+            });
+link = '';     }
+
+}
+</script>
+
+    </body> 
+</html>    

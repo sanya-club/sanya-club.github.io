@@ -1,0 +1,91 @@
+.clock {
+  display : none;
+  margin : 0 auto;
+  padding-top : 60px;
+
+
+
+  & svg {
+    fill : gray;
+  }
+
+  &__wrap {
+    max-width : 940px;
+    margin : 0 auto;
+    display : flex;
+    position : relative;
+    justify-content : space-between;
+    align-items : center;
+    flex-wrap : wrap;
+
+    &::before {
+      content : "24";
+      position : absolute;
+      top : 74px;
+      left : 23px;
+      width : 215px;
+      height : 215px;
+      font-size : 120px;
+      line-height : 205px;
+      border : 13px solid @red;
+      border-radius : 50%;
+      background : #f2f2f2;
+      color : @red;
+      text-align : center;
+    }
+  }
+  &__title {
+    width : 200px;
+    font-size : 30px;
+    line-height : 36px;
+    font-weight : 700;
+    margin : 0;
+    padding : 25px 30px 10px 0;
+    color : @black;
+  }
+  &__text {
+    width : 320px;
+    font-size : 18px;
+    margin-bottom : 30px;
+  }
+  &__link {
+    font-size : 18px;
+    color : @red;
+    &:hover {
+      color : @text-color;
+    }
+  }
+}
+
+@media (min-width: @sm-width) {
+  .clock {
+    display : block;
+    &__wrap {
+      &::before {
+        top : 66px;
+      }
+    }
+  }
+}
+
+@media (min-width: @md-width) {
+  .clock {
+    background : #f2f2f2;
+
+    &__wrap {
+      &::before {
+        top : 66px;
+      }
+    }
+    &__title {
+      width : 540px;
+    }
+
+    &__text {
+      width : 540px;
+    }
+    &__right-col {
+      padding-right : 45px;
+    }
+  }
+}

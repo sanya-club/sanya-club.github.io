@@ -1,0 +1,211 @@
+.intro {
+  margin-bottom : 50px;
+  position : relative;
+  min-height : 825px;
+  background : url(../images/intro/iphone-hand-1@2x.png) no-repeat 50% 270px, url(../images/intro/background-2@2x.jpg) no-repeat 50% 0;
+  background-size : 100%;
+  background-size : 268px 286px, cover;
+  background-attachment : scroll, fixed;
+  background-color : #1d2631;
+  @media (min-resolution: 1.5dppx) {
+    background-image : url(../images/intro/iphone-hand-3@1x.png) no-repeat 0 270px,url(../images/intro/background-1@2x.jpg) 50% 0;
+  }
+  @media (min-resolution: 3dppx) {
+    background-image : url(../images/intro/iphone-hand-3@2x.png) no-repeat 0 270px,url(../images/intro/background-1@3x.jpg) 50% 0;
+  }
+
+  & .container {
+    max-width : 940px;
+  }
+  &__title {
+    position : absolute;
+    width : 300px;
+    top : 120px;
+    left : 53%;
+    margin : 0 0 0 -160px;
+    padding : 0 10px;
+    text-align : center;
+    font-size : 24px;
+    line-height : auto;
+    font-weight : 300;
+    color : #ffffff;
+  }
+
+  &-desk {
+    &__container {
+      width : 100%;
+      position : absolute;
+      bottom : 0;
+      left : 0;
+      background : #283645;
+      padding : 28px 20px 0px 20px;
+      text-align : center;
+      margin : 0 auto;
+      text-align : center;
+
+      & .btn--desk {
+        max-width : 281px;
+      }
+    }
+    &__apps-list {
+      display : flex;
+      justify-content : center;
+      align-items : flex-end;
+      padding : 0;
+      margin : 0;
+      margin-bottom : 22px;
+
+      & li {
+        margin : 0 18px;
+        list-style : none;
+      }
+    }
+
+    &__text {
+      margin : 0 auto;
+      max-width : 280px;
+      min-height : 50px;
+      margin-bottom : 30px;
+      font-size : 14px;
+      line-height : 24px;
+      font-weight : 300;
+      color : #ffffff;
+    }
+
+
+
+    .btn {
+      display : inline-block;
+      vertical-align : middle;
+      padding : 8px 25px 11px;
+      margin-bottom : 33px;
+      font-size : 18px;
+      font-weight : 700;
+      text-decoration : none;
+      color : #ffffff;
+      background : transparent;
+      border : 3px solid #ffffff;
+      border-radius : 30px;
+      text-align : center;
+      &:hover {
+        color : @red;
+        background : @white;
+      }
+      &:active {
+        color : rgba(210,40,80, .5);
+      }
+    }
+  }
+}
+
+@media (min-width: @sm-width) {
+  .intro {
+    margin-bottom : 60px;
+    position : static;
+    min-height : 730px;
+    background : url(../images/intro/iphone-hand-1@2x.png) no-repeat 70% bottom, url(../images/intro/background-2@2x.jpg) no-repeat 50% 0;
+    background-size : 100%;
+    background-size : 516px 572px, cover;
+    background-attachment : scroll, fixed;
+    background-color : #1d2631;
+    @media (min-resolution: 1.5dppx) {
+      background-image : url(../images/intro/iphone-hand-3@1x.png) no-repeat 70% bottom, url(../images/intro/background-1@2x.jpg) 50% 0;
+    }
+    @media (min-resolution: 3dppx) {
+      background-image : url(../images/intro/iphone-hand-3@2x.png) no-repeat 70% bottom, url(../images/intro/background-1@3x.jpg) 50% 0;
+    }
+
+    & .container {
+      min-height : 730px;
+      position : relative;
+    }
+
+    &__title {
+      position : absolute;
+      width : 200px;
+      top : 210px;
+      left : 210px;
+      margin : 0 0 0 -160px;
+      padding : 0 10px;
+      text-align : center;
+      font-size : 40px;
+      font-family : @font-femily;
+      line-height : auto;
+      font-weight : 300;
+      color : #ffffff;
+    }
+    &__text {
+      font-size : 18px;
+    }
+
+
+    &-desk {
+      position : relative;
+      min-width : 730px;
+    }
+
+    &-desk__container {
+      width : 300px;
+      position : absolute;
+      top : 350px;
+      left : 0px;
+      background : transparent;
+    }
+  }
+}
+
+@media (min-width: @md-width) {
+  .intro {
+    margin-bottom : 70px;
+    min-height : 800px;
+    &-desk {
+      position : relative;
+      min-width : 800px;
+      &__container {
+        position : absolute;
+        top : 410px;
+        left : 0px;
+        background : transparent;
+      }
+      &__apps-list {
+        padding-left : 35px;
+      }
+      &__text {
+        min-width : 315px;
+        font-size : 18px;
+        line-height : 24px;
+      }
+    }
+    &__title {
+      width : 250px;
+      font-size : 50px;
+      top : 230px;
+    }
+    & .btn {
+      padding : 15px 25px 15px;
+    }
+  }
+  .btn--desk {
+    min-width : 300px;
+  }
+}
+
+@media (min-width: @lg-width) {
+  .intro {
+    margin-bottom : 80px;
+    background : url(../images/intro/iphone-hand-1@2x.png) no-repeat 60% bottom, url(../images/intro/background-2@2x.jpg) no-repeat 50% 0;
+    background-size : 100%;
+    background-size : 516px 572px, cover;
+    background-attachment : scroll, fixed;
+    background-color : #1d2631;
+    @media (min-resolution: 1.5dppx) {
+      background-image : url(../images/intro/iphone-hand-3@1x.png) no-repeat 60% bottom, url(../images/intro/background-1@2x.jpg) 50% 0;
+    }
+    @media (min-resolution: 3dppx) {
+      background-image : url(../images/intro/iphone-hand-3@2x.png) no-repeat 60% bottom, url(../images/intro/background-1@3x.jpg) 50% 0;
+    }
+  }
+  &__text {
+    font-size : 18px;
+  }
+}

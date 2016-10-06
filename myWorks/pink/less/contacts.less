@@ -1,0 +1,126 @@
+.contacts {
+  font-family : @font-femily;
+  margin-bottom : 20px;
+  &__wrap {
+    display : flex;
+    justify-content : space-around;
+    //        align-items: center;
+    flex-wrap : wrap;
+  }
+
+  &__contact-text {
+    display : block;
+    font-size : 24px;
+    line-height : 28px;
+    font-weight : 300;
+    margin : 0;
+    padding : 33px 0 27px;
+    color : @text-color;
+    text-decoration : none;
+    text-align : center;
+  }
+
+  &__contacts-title {
+    margin-bottom : 0;
+    font-size : 18px;
+    line-height : 29px;
+    font-weight : 700;
+    text-align : center;
+    color : @text-color;
+  }
+
+  &__contact {
+    margin-top : 14px;
+    font-size : 24px;
+    line-height : 28px;
+    font-weight : 300;
+    margin-left : 0;
+    color : #d22856;
+    text-align : center;
+  }
+  &__tel {
+    width : 280px;
+    order : 0;
+  }
+  &__mail {
+    width : 280px;
+    order : 0;
+  }
+  &__adress {
+    width : 280px;
+    order : 0;
+  }
+}
+
+@media (min-width: @sm-width) {
+  .contacts {
+    &__contact-text {
+      width : 400px;
+      margin : 0 auto;
+      font-size : 40px;
+      line-height : 48px;
+      font-weight : 300;
+    }
+
+    &__contacts-title {
+      font-size : 18px;
+      line-height : 29px;
+      font-weight : 700;
+      text-align : center;
+      color : @text-color;
+    }
+
+    &__contact {
+      font-size : 24px;
+      line-height : 28px;
+      font-weight : 300;
+      margin-left : 0;
+      color : #d22856;
+      text-align : center;
+    }
+    &__tel {
+      width : 280px;
+      order : 0;
+    }
+    &__mail {
+      width : 280px;
+      order : 0;
+    }
+    &__adress {
+      width : 280px;
+      order : 0;
+    }
+  }
+}
+@media (min-width: 940px) {
+  .contacts {
+    &__tel {
+      order : 0;
+    }
+    &__mail {
+      order : 2;
+    }
+    &__adress {
+      order : 1;
+    }
+  }
+}
+
+@media (min-width: @md-width) {
+  .contacts {
+    &__contacts-text {
+      width : 460px;
+      font-size : 50px;
+      line-height : 60px;
+    }
+    &__tel {
+      order : 0;
+    }
+    &__mail {
+      order : 2;
+    }
+    &__adress {
+      order : 1;
+    }
+  }
+}

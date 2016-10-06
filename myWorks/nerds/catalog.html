@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Catalog</title>
+        <link href="images/favicon.png" type="image/png" rel="shortcut icon">
+        <link href="css/style-nerds.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="css/symbols-nerds.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,700,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    </head> 
+    <header class="main-header catalog-header">
+        <div class="container clearfix">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="139" height="56" alt=""></a>
+            </div> 
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Студия</a></li>
+                    <li><a href="#">Клиенты</a></li>
+                    <li class="active"><a href="#">Магазин</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="basket">
+                <a class="icon-basket" href="#">Корзина</a>
+            </div>
+        </div>
+        <div class="container clearfix">
+            <div class="header-text">
+                Добро пожаловать в магазин готовых макетов
+            </div>
+        </div>    
+    </header>
+    <main class="catalog-main">
+        <div class="container clearfix">
+            <div class="left-sidebar">
+                <div class="price">
+                    <div class="sidebar-title">Стоимость:</div><br>
+                    <div class="range-filter">
+                        <div class="range-controls">
+                            <div class="scale">
+                                <div style="width:70%;"class="bar"></div>
+                            </div>
+                            <div class="toggle min-toggle"></div>
+                            <div class="toggle max-toggle"></div>
+                        </div>
+                        <div class="price-controls">
+                           от  <input class="min-price" type="text" name="min-price" value="0">
+                           до  <input class="max-price" type="text" name="max-price" value="1500">
+                        </div>
+                    </div>
+                </div>                
+                <div class="sidebar-title">СЕТКА:</div><br>
+                    <form class="speciality" action="/echo" method="get">
+                        <input type="radio" id="radio-1" name="toggle" checked>
+                        <label for="radio-1">Адаптивна</label><br>
+                        <input type="radio" id="radio-2" name="toggle">
+                        <label for="radio-2">Фиксированная</label><br>
+                        <input type="radio" id="radio-3" name="toggle">
+                        <label for="radio-3">Резиновая</label><br>
+                    </form> <br>   
+                
+            <div class="sidebar-title">ОСОБЕННОСТИ:</div><br>
+                    <form class="speciality" action="/echo" method="get">
+                        <input type="checkbox" id="checkbox-1" checked>
+                        <label for="checkbox-1">Слайдер</label><br>
+                        <input type="checkbox" id="checkbox-2">
+                        <label for="checkbox-2">Блок преимуществ</label><br>
+                        <input type="checkbox" id="checkbox-3" checked>
+                        <label for="checkbox-3">Новости</label><br>
+                        <input type="checkbox" id="checkbox-4">
+                        <label for="checkbox-4">Галерея</label><br>
+                        <input type="checkbox" id="checkbox-5">
+                        <label for="checkbox-5">Корзина</label><br>
+                    </form>    
+                </div>
+            <div class="catalog-container">
+            <div class="sort-title">
+                            <span class="sort">Сортировать:</span>
+                            <a href="#" class="sort">По цене</a>
+                            <a href="#" class="sort">По типу</a>
+                            <a href="#" class="sort">По функционалу</a>
+                                <a href="#" class="pick"></a>
+                                <a href="#" class="pick"></a>
+                        </div>
+                        <div class="catalog-items">
+                            <div class="catalog-item">
+                                <section class="shape nerds">
+                                    <div class="circle first-circle"></div>
+                                    <div class="circle second-circle"></div>
+                                    <div class="circle third-circle"></div>
+                                    <div class="details">
+                                        <div class="details-title">Sunset</div>
+                                        <p>Интернет-магазин с личным кабинетом.</p>
+                                        <a href="#" class="btn">10 000 р.</a>
+                                    </div>
+
+                                </section>
+                            </div>
+                            <div class="catalog-item">
+                                <section class="shape nerds">
+                                    <div class="circle first-circle"></div>
+                                    <div class="circle second-circle"></div>
+                                    <div class="circle third-circle"></div>
+                                    <div class="details">
+                                        <div class="details-title">Sunset</div>
+                                        <p>Интернет-магазин с личным кабинетом.</p>
+                                        <a href="#" class="btn">10 000 р.</a>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="catalog-item">
+                                <section class="shape nerds">
+                                    <div class="circle first-circle"></div>
+                                    <div class="circle second-circle"></div>
+                                    <div class="circle third-circle"></div>
+                                    <div class="details">
+                                        <div class="details-title">Sunset</div>
+                                        <p>Интернет-магазин с личным кабинетом.</p>
+                                        <a href="#" class="btn">10 000 р.</a>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="catalog-item">
+                                <section class="shape nerds">
+                                    <div class="circle first-circle"></div>
+                                    <div class="circle second-circle"></div>
+                                    <div class="circle third-circle"></div>
+                                    <div class="details">
+                                        <div class="details-title">Sunset</div>
+                                        <p>Интернет-магазин с личным кабинетом.</p>
+                                        <a href="#" class="btn">10 000 р.</a>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="catalog-item">
+                                <section class="shape nerds">
+                                    <div class="circle first-circle"></div>
+                                    <div class="circle second-circle"></div>
+                                    <div class="circle third-circle"></div>
+                                    <div class="details">
+                                        <div class="details-title">Sunset</div>
+                                        <p>Интернет-магазин с личным кабинетом.</p>
+                                        <a href="#" class="btn">10 000 р.</a>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="catalog-item">
+                                <section class="shape nerds">
+                                    <div class="circle first-circle"></div>
+                                    <div class="circle second-circle"></div>
+                                    <div class="circle third-circle"></div>
+                                    <div class="details">
+                                        <div class="details-title">Sunset</div>
+                                        <p>Интернет-магазин с личным кабинетом.</p>
+                                        <a href="#" class="btn">10 000 р.</a>
+                                    </div>
+                                </section>
+                            </div>
+
+                        <div class="paginator clearfix">
+                            <a class=" btn btn-paginator active" href="#1">1</a>
+                            <a class="btn btn-paginator" href="#2">2</a>
+                            <a class="btn btn-paginator" href="#3">3</a>
+                            <a class="btn btn-paginator btn-next" href="#next">Следующая</a>
+                        </div>
+            </div>
+    </main>
+    <footer class="main-footer">
+        <div class="map">
+            <div class="adress">
+                <p>NЁRDS <span>DESIGN STUDIO</span></p>
+                <p>350000, Краснодар,<br>ул. Головатого, 100</p>
+                <p>тел. +7 (861) 275-75-75</p>
+                <a class="btn adress-btn" href="#">Рапишите нам</a>
+            </div>
+            <div class="marker">
+                <img src="images/nerds-marker.png" width="231" height="190" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <section class="social-footer">
+                <div class="social-button">
+                    <a class="social-btn social-btn-vk icon-vk" href="#">Вконтакте</a>
+                    <a class="social-btn social-btn-fb icon-facebook" href="#">Вконтакте</a>
+                    <a class="social-btn social-btn-inst icon-instagramm" href="#">Вконтакте</a>
+                </div>
+                <div class="social-text">
+                    <h2>Давайте дружить, это выгодно!</h2>
+                    <p>Скидка 10% для друзей из социальных сетей.</p>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <body>
+        
+    </body> 
+</html>    

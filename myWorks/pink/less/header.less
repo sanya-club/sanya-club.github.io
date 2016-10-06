@@ -1,0 +1,443 @@
+body * {
+  box-sizing : border-box;
+}
+
+
+
+.page-header__wrap {
+  width : 100%;
+  margin : 0 auto;
+  background : rgba(0,0,0,.5);
+  position : fixed;
+  top : 0;
+  left : 0;
+  z-index : 1000;
+
+  & .container {
+    max-width : 940px;
+    display : flex;
+    justify-content : space-between;
+    align-items : center;
+  }
+}
+.page-header {
+  &__logo {
+    padding : 20px 0;
+    &:active {
+      opacity : .5;
+    }
+  }
+
+  &__hamburger {
+    margin-top : 10px;
+    padding : 17px 0;
+    width : 50px;
+    height : 35px;
+    fill : @white;
+    cursor : pointer;
+
+    &:hover {
+      fill : @red;
+    }
+
+    &:active {
+      opacity : .3;
+    }
+  }
+} 
+
+.main-nav {
+  position : relative;
+  min-height : 1px;
+  padding-left : 15px;
+  padding-right : 15px;
+  display : flex;
+  justify-content : space-between;
+  align-items : center;
+
+  & li {
+    display : block;
+    padding : 29px 35px 31px;
+
+    &:last-child {
+      padding-right : 0;
+    }
+
+    & a {
+      position : relative;
+      display : inline;
+      padding : 10px 0;
+      font-size : 18px;
+      font-weight : 400;
+      letter-spacing : normal;
+      font-family : @font-femily;
+      color : #ffffff;
+      padding : 10px 0;
+      text-decoration : none;
+
+      &:hover::after {
+        content : "";
+        position : absolute;
+        left : 0;
+        bottom : 0;
+        width : 100%;
+        height : 3px;
+        background : @white;
+        opacity : 1;
+        transition : all .5s;
+      }
+
+      &:active {
+        opacity : .5;
+      }
+    }
+  }
+}
+
+@media (min-width: @xs-width) {
+  padding : 20px 0;
+  
+  //responsuve menu
+  
+  .main-nav-trigger {
+  font-size: 45px;
+  color: #fff;
+  float: right;
+  line-height: 1;
+  display: none;
+  cursor: pointer;
+  &:hover {
+    color: ;
+    transition: all .3s ease-in-out;
+  }
+}
+
+//@media(max-width: 992px) {
+  
+  
+  .main-nav-trigger {
+    display: block;
+    
+  }
+  
+//  .main-logo {
+//    float: left;
+//  }
+//  .site-nav {
+//    position: relative;
+//  }
+  
+  .main-nav  {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: -20px;
+    left: 0;
+    background-color:#283645 ;
+    padding: 20px 0;
+    z-index: -1;
+    
+    
+    li {
+      display: block;
+      margin-left: 0;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #fff;
+      &:first-child {
+        margin-top: 80px;
+        border-top: 1px solid #fff;
+      }
+    }
+    a {
+      display: inline-block;
+      padding: 20px;
+      &.active {
+        border-color: transparent;
+        
+      }
+    }
+  }
+}
+  
+  //ninja-button
+
+@color10: #FFFFFF;
+
+
+@fast: 0.3s;
+@slow: 0.4s;
+.transition (@time:@slow) {
+  transition:           all @time ease-in-out;
+  -webkit-transition:   all @time ease-in-out;
+  -moz-transition:      all @time ease-in-out;
+  -o-transition:        all @time ease-in-out;
+  -ms-transition:       all @time ease-in-out; 
+}
+
+.transition-delay (@time:@slow) {
+  -webkit-transition-delay: @time;
+  -moz-transition-delay: @time;
+  -o-transition-delay: @time;
+  -ms-transition-delay: @time;
+  transition-delay: @time;
+}
+
+.rotate (@deg: 45deg){
+  transform: rotate(@deg);
+  -webkit-transform: rotate(@deg);
+  -moz-transform: rotate(@deg);
+  -o-transform: rotate(@deg);
+  -ms-transform: rotate(@deg);
+}
+
+/* Element Variables
+   Change @bar-w to adjust entire button size.
+*/
+@bar-w: 44px;
+@bar-o: @bar-w /3.3;
+@bar-h: 3px;
+
+/* Ninja Button styles */
+.ninja-btn {
+  display: none;
+  float: right;
+  position: relative;
+  width: @bar-w;
+  height: (@bar-o * 2) + @bar-h;
+  cursor: pointer;
+  padding: 0;
+  
+  @media(max-width: 992px) {
+    display: inline-block;
+  }
+}
+
+
+.ninja-btn span,
+.ninja-btn span:before,
+.ninja-btn span:after {
+	.transition(@fast);
+  background-color: @color10;
+  width: @bar-w;
+  height: @bar-h;
+}
+
+.ninja-btn span {
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin-top: @bar-o;
+  
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+  &:before {
+    top: -@bar-o;
+  }
+  &:after {
+    top: @bar-o;
+  }
+  
+}/* Ninja Button */
+
+.ninja-btn span:hover,
+.ninja-btn span:hover:before,
+.ninja-btn span:hover:after {
+  background-color: pink;
+}
+
+.ninja-btn.active span {
+  background-color: transparent;
+  &:before,
+  &:after {
+    top: 0;
+  }
+  &:before {
+    .rotate(-135deg);
+  }
+  &:after {
+    .rotate(135deg);
+  }
+}/* Ninja Button Active */
+
+.ninja-btn.active span:before,
+.ninja-btn.active span:after {
+  background-color: pink;
+}
+
+  //end responsive
+
+    
+@media (min-width: @sm-width) {
+//  .main-nav  {
+//    display : none;
+//  }
+  .page-header {
+    &__logo {
+      padding : 0px 0 15px 0;
+    }
+    &__logo a {
+      display : block;
+      position : relative;
+      padding : 0;
+      width : 145px;
+      height : 40px;
+      margin-right : 70px;
+      background : url(../images/header/Pink-logo-2@1x.png) no-repeat;
+      background-size : 100%;
+      @media (min-resolution: 1.5dppx) {
+        background-image : url(../images/header/Pink-logo-2@2x.png);
+      }
+      @media (min-resolution: 3dppx) {
+        background-image : url(../images/header/Pink-logo-2@2x.png);
+      }
+      & img {
+        display : none;
+      }
+      &:active {
+        opacity : .5;
+      }
+    }
+    
+    
+    
+  }
+  
+  
+@media (min-width: @md-width) {
+//  .main-nav li {
+//    display : block;
+//  }
+
+  .page-header__hamburger {
+    display : none;
+  }
+  .page-header {
+    &__logo {
+      padding : 0px 0 15px 0;
+    }
+    &__logo a {
+      display : block;
+      position : relative;
+      width : 145px;
+      height : 40px;
+      margin-right : 70px;
+      background : url(../images/header/Pink-logo-3@1x.png) no-repeat;
+      background-size : 100%;
+      @media (min-resolution: 1.5dppx) {
+        background-image : url(../images/header/Pink-logo-3@2x.png);
+      }
+      @media (min-resolution: 3dppx) {
+        background-image : url(../images/header/Pink-logo-3@2x.png);
+      }
+      & img {
+        display : none;
+      }
+      &:active {
+        opacity : .5;
+      }
+    }
+  }
+  
+  .main-nav {
+    
+    top:0;
+    padding:  0;
+    z-index: 0;
+    
+    
+  background-color:transparent;
+  position : relative;
+  min-height : 1px;
+  padding-left : 15px;
+  padding-right : 15px;
+  display : flex;
+  justify-content : space-between;
+  align-items : center;
+
+  & li {
+    display : block;
+    padding : 29px 35px 31px;
+    border-bottom: none;
+
+    &:last-child {
+      padding-right : 0;
+      
+    }
+    &:first-child {
+        margin-top: 0;
+        border-top: none;
+      }
+
+    & a {
+      position : relative;
+      display : inline;
+      padding : 10px 0;
+      font-size : 18px;
+      font-weight : 400;
+      letter-spacing : normal;
+      font-family : @font-femily;
+      color : #ffffff;
+      padding : 10px 0;
+      text-decoration : none;
+
+      &:hover::after {
+        content : "";
+        position : absolute;
+        left : 0;
+        bottom : 0;
+        width : 100%;
+        height : 3px;
+        background : @white;
+        opacity : 1;
+        transition : all .5s ease-in-out;
+      }
+
+      &:active {
+        opacity : .5;
+      }
+    }
+  }
+}
+@media (min-width: @lg-width) {
+  .main-nav li {
+    display : block;
+  }
+
+  .page-header__hamburger {
+    display : none;
+  }
+
+  .page-header {
+    &__logo {
+      padding : 0px 0 15px 0;
+    }
+    &__logo a {
+      display : block;
+      position : relative;
+      width : 145px;
+      height : 40px;
+      margin-right : 70px;
+      background : url(../images/header/Pink-logo-3@1x.png) no-repeat;
+      background-size : 100%;
+      @media (min-resolution: 1.5dppx) {
+        background-image : url(../images/header/Pink-logo-3@2x.png);
+      }
+      @media (min-resolution: 3dppx) {
+        background-image : url(../images/header/Pink-logo-3@2x.png);
+      }
+      & img {
+        display : none;
+      }
+      &:active {
+        opacity : .5;
+      }
+    }
+  }
+}
+}
+}

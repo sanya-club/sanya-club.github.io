@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Барбершоп "Бородинский"</title>
+        <link href="images/favicon.ico" type="image/ico" rel="shortcut icon">
+        <link href="css/style-barbershop.css" type="text/css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    </head> 
+    <body>
+        <header class="main-header"> 
+            <div class="container clearfix">
+                <nav class="main-navigation">
+                   <ul>
+                       <li class="active"><a href="index.html">Главная</a></li>
+                       <li><a href="#">Информация</a></li>
+                       <li><a href="#">Новости</a></li>
+                       <li><a href="price.html">Прайс-лист</a></li>
+                       <li><a href="shop.html">Магазин</a></li>
+                       <li><a href="#">Контакты</a></li>
+                   </ul>   
+                </nav>
+                <div class="user-block">
+                    <a class="login" href="login.html">Вход</a>
+                </div>    
+            </div>    
+        </header> 
+        <div class="container">
+            <div class="logo">
+               <img src="Images/Logo.png" width="368" height="152" alt="Барбершоп "Бородинский""> 
+            </div> 
+            <section class="features-row clearfix">
+                <div class="features-item">
+                    <div class="features-title">Быстро</div>
+                        <p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДЕТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!</p>
+                </div>
+                <div class="features-item">
+                    <div class="features-title">Круто</div>
+                        <p>ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ.
+МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА ИЛИ КИНО! ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.</p>
+                </div>
+                <div class="features-item">
+                    <div class="features-title">Дорого</div>
+                        <p>НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕНЫЙ СТАТУС?</p>
+                </div>   
+            </section> 
+            <div class="index-content clearfix">
+                <section class="content-column-left">
+                    <h2 class="content-column-title">Новости</h2>
+                    <ul class="news-preview">
+                        <li>
+                           НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ<br>
+                           <time datatime="2013-09-25">25 сентября</time>
+                        </li>
+                        <li>
+                          В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДЕТЕЛЬ МНОЖЕТСВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ<br>
+                          <time datatime="2013-09-19">19 сентября</time>    
+                        </li>    
+                    </ul>
+                    <a href="#" class="btn">Все новости</a>
+                </section> 
+                <section class="content-column-right">
+                    <h2 class="content-column-title">Фотогалерея</h2>
+                    <div class="gallery">
+                        <figure class="gallery-content">
+                            <a href=""><img src="Images/photo-1.jpg" width="286" height="164" alt=""></a>
+                            <a href=""><img src="Images/photo-1.jpg" width="286" height="164" alt=""></a>
+                            <a href=""><img src="Images/photo-1.jpg" width="286" height="164" alt=""></a>
+                            <a href=""><img src="Images/photo-1.jpg" width="286" height="164" alt=""></a>
+                            <a href=""><img src="Images/photo-1.jpg" width="286" height="164" alt=""></a>
+                            <a href=""><img src="Images/photo-1.jpg" width="286" height="164" alt=""></a>
+                            <a href=""><img src="Images/photo-1.jpg" width="286" height="164" alt=""></a>
+                            <a href=""><img src="Images/photo-1.jpg" width="286" height="164" alt=""></a>
+                        </figure>
+                        <button class="btn gallery-prev">Назад</button>
+                        <button class="btn gallery-next">Вперед</button>
+                    </div>    
+                </section>    
+            </div>
+            <div class="index-content clearfix">
+                <section class="content-column-left">
+                    <div class="main-contacts">
+                        <h2 class="content-column-title">Контактная ирформация</h2>
+                        <p>
+                            BARBERSHOP «BORODINSKI»<br>
+                            АДРЕС: Г. МОСКВА, УЛ. СОБАКИ ПАВЛОВА, Д. 13<br>
+                            ТЕЛЕФОН: +7 (495) 666-02-666
+                        </p>
+                        <p>
+                            ВРЕМЯ РАБОТЫ:<br> 
+                            ПН — ПТ: С 10:00 ДО 22:00<br>
+                            СБ — ВС: С 10:00 ДО 19:00
+                        </p>
+                        <a href="map.html" class="btn open-map">Как проехать</a>
+                        <a href="#" class="btn">Обратная сязь</a>
+                    </div>    
+                </section> 
+                <section class="content-column-right">
+                    <div class="appointmen-form">
+                        <h2 class="content-column-title">Записаться</h2>
+                        <p>
+                            УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ     БРОНИ
+                        </p>
+                        <form action="/echo" method="post">
+                            <input type="date" name="date" value="" placeholder="Дата">
+                            <input type="time" name="time" value="" placeholder="Время">
+                            <input type="text" name="name" value="" placeholder="Ваше имя">
+                            <input type="tel" name="phone" value="" placeholder="Телефон">
+                            <button tupe="submit" class="btn">Отправить</button>
+                        </form>    
+                    </div>
+                </section>
+            </div>    
+        </div> 
+        <footer class="main-footer">
+            <div class="container clearfix">
+                <section class="footer-contacts">
+                    BARBERSHOP «BORODINSKI»<br>
+                    АДРЕС: Г. МОСКВА, УЛ. СОБАКИ ПАВЛОВА, Д. 13<br>
+                    <a href="#">Как нас найти?</a><br>
+                    ТЕЛЕФОН: +7 (495) 666-02-666
+                </section>
+                <section class="footer-social">
+                    <p>Давайте дружить!</p>
+                    <a href="#" class="social-btn social-btn-vk">Вконтакте</a>
+                    <a href="#" class="social-btn social-btn-fb">Фейсбук</a>
+                    <a href="#" class="social-btn social-btn-inst">Инстаграм</a>
+                </section> 
+                <section class="footer-copyright">
+                    <p>Дизайн сайта:</p>
+                    <a href="#" class="btn">htmlacdemy.ru</a>
+                </section>    
+            </div>    
+        </footer> 
+        <div class="modal-content">
+            <div class="modal-content-close">закрыть</div>
+            <h2 class="modal-content-title">Личный кабинет</h2>
+            <p>Введите пожалуйста свой логин и пароль.</p>
+            <form class="login-form" action="/echo" method="post">
+                <input type="text" class="icon-user" name="login" placeholder="Логин" >
+                <input type="password" class="icon-password" name="password" placeholder="Пароль" >
+                <input type="checkbox" name="remember" id="remember-me">
+                <label for="remember-me">Запомните меня</label>
+                <a href="#" class="restore">Я забыл пароль!</a>
+                <button type="submit" class="btn">Войти</button>
+            </form>
+        </div>
+        <div class="modal-content-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.3455210345037!2d37.84647901597232!3d55.68298038053477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab672c352de49%3A0x545ca1c930f83669!2z0JHQsNGA0LHQtdGA0YjQvtC_INCh0LXRgNC_0LXQvdC40L3QvtCyINCh0YLRg9C00LjQvg!5e0!3m2!1sru!2sua!4v1451059997031" width="766" height="561" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="modal-content-close">закрыть</div>
+        </div>
+        <script>
+      var link = document.querySelector(".login");
+      var popup = document.querySelector(".modal-content");
+      var close = document.querySelector(".modal-content-close");
+      var form = popup.querySelector("form");
+      var login = popup.querySelector("[name=login]");
+      var password = popup.querySelector("[name=password]");
+      var storage = localStorage.getItem("login");
+
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.add("modal-content-show");
+        if (storage) {
+          login.value = storage;
+          password.focus();
+        } else {
+          login.focus();
+        }
+      });
+
+      close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("modal-content-show");
+      });
+
+      form.addEventListener("submit", function(event) {
+        if (!(login.value && password.value)) {
+          event.preventDefault();
+          popup.classList.remove("modal-error");
+          popup.classList.add("modal-error");
+        } else {
+          localStorage.setItem("login", login.value);
+        }
+      });
+
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode == 27) {
+          if (popup.classList.contains("modal-content-show")) {
+            popup.classList.remove("modal-content-show");
+          }
+        }
+      });
+
+      var mapOpen = document.querySelector(".open-map");
+      var mapPopup = document.querySelector(".modal-content-map");
+      var mapClose = mapPopup.querySelector(".modal-content-close");
+
+      mapOpen.addEventListener("click", function(event) {
+        event.preventDefault();
+        mapPopup.classList.add("modal-content-show");
+      });
+
+      mapClose.addEventListener("click", function(event) {
+        event.preventDefault();
+        mapPopup.classList.remove("modal-content-show");
+      });
+
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode == 27) {
+          if (mapPopup.classList.contains("modal-content-show")) {
+            mapPopup.classList.remove("modal-content-show");
+          }
+        }
+      });
+    </script> 
+<!--        галерея-->
+        <script>
+            var html = document.documentElement;
+            html.className = html.className.replace("no-js","js");
+        </script>
+        <script>
+            var gallery = document.querySelector(".gallery");
+            gallery.classList.add("gallery-live");
+            
+            var buttons = 
+        '<button class="btn gallery-prev">Назад</button>' +
+        '<button class="btn gallery-next">Вперед</button>';
+        
+      gallery.innerHTML = gallery.innerHTML + buttons;
+      
+      // Зададим начальное состояние кнопок
+      var prev = document.querySelector(".gallery-prev");
+      prev.setAttribute('disabled', 'disabled');
+        </script>
+        
+    </body> 
+</html>    

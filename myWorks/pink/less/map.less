@@ -1,0 +1,45 @@
+.map {
+  position : relative;
+  margin-bottom : 30px;
+}
+
+.box--angle {
+  position : absolute;
+  top : -2px;
+  left : 0;
+  right : 0;
+  height : 70px;
+  fill : #ffffff;
+  z-index : 50;
+  filter : drop-shadow(10px 10px 5px rgba(41,52,73,.5));
+}
+.tablet {
+  display : none;
+}
+.desktop {
+  display : none;
+}
+
+@media (min-width: @sm-width) {
+  .mobile {
+    display : none;
+  }
+  .tablet {
+    display : block;
+  }
+  .desktop {
+    display : none;
+  }
+}
+
+@media (min-width: @md-width) {
+  .mobile {
+    display : none;
+  }
+  .tablet {
+    display : none;
+  }
+  .desktop {
+    display : block;
+  }
+}

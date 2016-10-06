@@ -1,0 +1,193 @@
+#slider-wrap {
+  /* Оболочка слайдера и кнопок */
+}
+#slider {
+  /* Оболочка слайдера */
+
+  height : 280px;
+  overflow : hidden;
+  position : relative;
+}
+.slide {
+  /* Слайд */
+
+  height : 100%;
+}
+.sli-links {
+  /* Кнопки смены слайдов */
+  margin-top : 10px;
+  text-align : center;
+  position : relative;
+  width : 80px;
+  top : -46px;
+  //    left: 34%;
+  margin : 0 auto;
+}
+.sli-links .control-slide {
+  margin : 4px;
+  display : inline-block;
+  width : 8px;
+  height : 8px;
+  overflow : hidden;
+  text-indent : -9999px;
+  border-radius : 50%;
+  border : 2px solid #000000;
+  background : #000000;
+}
+.sli-links .control-slide:hover {
+  cursor : pointer;
+  background : #ffffff;
+}
+
+.sli-links .control-slide.active {
+  background : #ffffff;
+}
+#prewbutton,
+#nextbutton {
+  /* Ссылка "Следующий" и "Педыдущий" */
+  display : block;
+  width : 25px;
+  height : 25px;
+  position : absolute;
+  top : 0;
+  overflow : hidden;
+  text-indent : -999px;
+  border-left : 2px solid gray;
+  border-bottom : 2px solid gray;
+  opacity : .8;
+  z-index : 3;
+  outline : none !important;
+}
+#prewbutton {
+  transform : rotate(45deg);
+  top : 50%;
+  left : 10px;
+}
+#nextbutton {
+  transform : rotate(225deg);
+  top : 50%;
+  right : 10px;
+}
+#prewbutton:hover,
+#nextbutton:hover {
+  opacity : 1;
+}
+.slide {
+  padding : 0px;
+}
+
+.slide__slide-title {
+  margin-bottom : 5px;
+  font-size : 18px;
+  line-height : 30px;
+  color : #283645;
+  font-weight : 700;
+  z-index : 100;
+  text-align : center;
+}
+
+.slide__slide-text {
+  margin : 0;
+  font-size : 14px;
+  line-height : 30px;
+  color : #283645;
+  text-align : center;
+}
+
+.slide svg {
+  fill : gray;
+}
+.quote {
+  display : none;
+  width : 95px;
+  margin : 0 auto;
+  opacity : .7;
+}
+
+.slide__slide-title-1 {
+  display : none;
+  margin : 0;
+  margin-top : 10px;
+  font-size : 20px;
+  line-height : 30px;
+  color : #283645;
+  font-weight : 700;
+  z-index : 100;
+  text-align : center;
+}
+
+.slide__slide-text-1 {
+  display : none;
+  margin : 0;
+  font-size : 12px;
+  color : #283645;
+  text-align : center;
+}
+
+#prewbutton {
+  display : none;
+}
+#nextbutton {
+  display : none;
+}
+
+//     end slider
+
+@media (min-width: @sm-width) {
+  .slide__slide-text {
+    font-size : 18px;
+  }
+
+  .slide__slide-title {
+    display : none;
+  }
+
+  .slide__slide-title-1 {
+    display : block;
+  }
+  .slide__slide-text-1 {
+    display : block;
+  }
+  .slide__slide-text {
+    margin-top : 40px;
+  }
+  .sli-links {
+    top : -20px;
+    //        left: center;
+  }
+  .slide {
+    padding : 25px 80px;
+  }
+}
+
+@media (min-width: @md-width) {
+  .slide__slide-title {
+    display : none;
+  }
+
+  .slide__slide-title-1 {
+    display : block;
+  }
+  .slide__slide-text-1 {
+    display : block;
+  }
+  .slide__slide-text {
+    margin-top : 15px;
+  }
+  .sli-links {
+    top : -15px;
+    //        left: center;
+  }
+  .quote {
+    display : block;
+  }
+  #prewbutton {
+    display : block;
+  }
+  #nextbutton {
+    display : block;
+  }
+  .slide {
+    padding : 25px 80px;
+  }
+}
